@@ -1,0 +1,81 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@layer components {
+  .header-nav-item {
+    @apply h-20  flex items-center;
+  }
+  .header-nav-item-a {
+    @apply flex space-x-2 items-center;
+  }
+}
+
+body {
+  font-family: "Space Grotesk", sans-serif;
+}
+
+@media (max-width: 1890px) {
+  html {
+    font-size: 96.666666%;
+  }
+}
+@media (max-width: 1790px) {
+  html {
+    font-size: 93.33333%;
+  }
+}
+@media (max-width: 1690px) {
+  html {
+    font-size: 90%;
+  }
+}
+@media (max-width: 1590px) {
+  html {
+    font-size: 83.34%;
+  }
+}
+@media (max-width: 1490px) {
+  html {
+    font-size: 80.01%;
+  }
+}
+@media (max-width: 1390px) {
+  html {
+    font-size: 76.68%;
+  }
+}
+@media (max-width: 1290px) {
+  html {
+    font-size: 73.35%;
+  }
+}
+@media (max-width: 1190px) {
+  html {
+    font-size: 70.02%;
+  }
+}
+@media (max-width: 1090px) {
+  html {
+    font-size: 66.69%;
+  }
+}
+@media (max-width: 990px) {
+  html {
+    font-size: 63.36%;
+  }
+}
+@media (max-width: 890px) {
+  html {
+    font-size: 60%;
+  }
+}
+@media (max-width: 550px) {
+  html {
+    font-size: 50%;
+  }
+}
+@media (max-width: 450px) {
+  html {
+    font-size: 40%;
+  }
+}
