@@ -5,6 +5,9 @@
   .header-nav-item {
     @apply h-20  flex items-center;
   }
+  .header-nav-item-active {
+    @apply text-orange-400   border-b-orange-400 md:border-b-4 border-b-2;
+  }
   .header-nav-item-a {
     @apply flex space-x-2 items-center;
   }

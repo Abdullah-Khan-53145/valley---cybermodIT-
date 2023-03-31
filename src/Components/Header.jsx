@@ -1,16 +1,34 @@
-import React from "react";
+import React, { useState } from "react";
+import Hamburger from "hamburger-react";
 import Logo from "../assets/logo.svg";
 function Header() {
+  const [isOpen, setOpen] = useState(false);
   return (
-    <header className="bg-header border h-20 header-nav flex justify-between px-5 items-center">
+    <header
+      className={`bg-header md:h-20 md:flex-row flex-col md:p-0  md:px-5  pb-3 overflow-hidden transition-all duration-300 ${
+        isOpen ? "h-128" : "h-20"
+      } header-nav flex justify-between md:px-5 items-center`}
+    >
       {/* Side logo */}
-      <div>
-        <img className="w-20 object-contain" src={Logo} alt="Valley" />
+      <div className="md:h-20  h-20 m-0 py-4 w-full md:w-fit md:p-0   flex items-center justify-between">
+        <img
+          className="w-24  md:w-20 md:ml-0 ml-6 object-contain"
+          src={Logo}
+          alt="Valley"
+        />
+        <div className="md:hidden block ">
+          <Hamburger
+            toggled={isOpen}
+            toggle={setOpen}
+            color="#FFFFFF"
+            size={17}
+          />
+        </div>
       </div>
       {/* Navigation */}
-      <nav className="h-full w-full lg:w-3/4">
-        <ul className="flex space-x-3 text-white w-full px-3 justify-around">
-          <li className="header-nav-item text-orange-400   border-b-orange-400 border-b-4">
+      <nav className="md:h-full h-max w-full md:w-3/4 lg:w-2/3 md:px-0 px-5">
+        <ul className="flex md:flex-row flex-col md:space-x-3 text-white w-full px-3 justify-around">
+          <li className="header-nav-item header-nav-item-active">
             <a className="header-nav-item-a">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -202,7 +220,7 @@ function Header() {
         </ul>
       </nav>
       {/* User Profile */}
-      <div className="flex items-center space-x-2 text-white">
+      <div className="flex pb-4 md:p-0 items-center space-x-2 text-white">
         <img
           src="https://www.mecgale.com/wp-content/uploads/2017/08/dummy-profile.png"
           alt="user"
@@ -212,7 +230,7 @@ function Header() {
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 20 20"
           fill="currentColor"
-          className="w-6 h-6"
+          className="w-6 h-6 md:block hidden"
         >
           <path
             fillRule="evenodd"
@@ -220,6 +238,23 @@ function Header() {
             clipRule="evenodd"
           />
         </svg>
+        <button className="flex  space-x-1 md:hidden items-center  cursor-pointer text-gray-300 ">
+          <span className="h-fit">Sign out</span>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            strokeWidth={1.5}
+            stroke="currentColor"
+            className="w-5 h-5"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              d="M15.75 9V5.25A2.25 2.25 0 0013.5 3h-6a2.25 2.25 0 00-2.25 2.25v13.5A2.25 2.25 0 007.5 21h6a2.25 2.25 0 002.25-2.25V15M12 9l-3 3m0 0l3 3m-3-3h12.75"
+            />
+          </svg>
+        </button>
       </div>
     </header>
   );
