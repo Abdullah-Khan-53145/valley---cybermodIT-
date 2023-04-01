@@ -15,7 +15,7 @@ function DashboardSearch() {
     "Shipped",
     "Delivery",
     "Expected delivery date",
-    "status",
+    "Status",
   ];
   return (
     <main>

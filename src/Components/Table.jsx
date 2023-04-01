@@ -1,5 +1,4 @@
 import React from "react";
-
 function Table({ head, body = [] }) {
   return (
     <div className={`overflow-x-auto ${body.length === 0 && "border-b"}`}>
@@ -9,7 +8,7 @@ function Table({ head, body = [] }) {
             {head.map((heading, index) => (
               <th
                 key={index}
-                className="p-6 border-y min-w-fit  border-gray-300"
+                className="p-6 border-y  min-w-[12rem] border-gray-300"
                 style={{ color: "#949494" }}
               >
                 {heading}
@@ -27,7 +26,18 @@ function Table({ head, body = [] }) {
                     key={index}
                     className=" text-center py-6 border-b border-gray-300"
                   >
-                    {cell}
+                    {index === row.length - 1 &&
+                    head[head.length - 1] === "Status" ? (
+                      <span
+                        className={`${
+                          cell === "Delivered" ? "bg-orange-400" : "bg-header"
+                        } rounded-lg text-white text-sm px-8 py-1 `}
+                      >
+                        {cell}
+                      </span>
+                    ) : (
+                      <span>{cell}</span>
+                    )}
                   </td>
                 ))}
               </tr>
