@@ -3,13 +3,16 @@
 @tailwind utilities;
 @layer components {
   .header-nav-item {
-    @apply h-20  flex items-center;
+    @apply flex items-center;
   }
-  .header-nav-item-active {
-    @apply text-orange-400   border-b-orange-400 md:border-b-4 border-b-2;
+  .active {
+    @apply text-orange-400 border-b-orange-400 md:border-b-4 border-b-2;
   }
   .header-nav-item-a {
-    @apply flex space-x-2 items-center;
+    @apply flex space-x-2 items-center h-20 w-full transition-all hover:border-b-4 hover:text-orange-400 hover:border-b-orange-400;
+  }
+  .tag {
+    @apply flex space-x-2 items-center py-3 px-6 text-sm border  border-orange-400 text-orange-400 rounded-xl sm:w-full transition-all hover:border-b-4 sm:min-w-fit;
   }
 }
 
