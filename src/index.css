@@ -5,15 +5,17 @@
   .header-nav-item {
     @apply flex items-center;
   }
-
   .header-nav-item-a {
-    @apply flex space-x-2 items-center h-20 w-full transition-all hover:border-b-4 hover:text-orange-400 hover:border-b-orange-400;
+    @apply flex space-x-2 items-center h-20 w-full transition-all md:hover:border-b-4 hover:text-orange-400 hover:border-b-orange-400;
   }
   .tag {
-    @apply flex space-x-2 items-center py-3 px-6 text-sm border  border-orange-400 text-orange-400 rounded-xl sm:w-full transition-all hover:border-b-4 sm:min-w-fit;
+    @apply flex space-x-2 items-center py-3 px-6 text-sm border  border-orange-400 text-orange-400 rounded-xl sm:w-full sm:min-w-fit;
   }
   .filter-text-inputs {
-    @apply border-b placeholder-gray-400  border-gray-400 w-full text-lg outline-none placeholder:font-light placeholder:text-gray-400;
+    @apply border-b placeholder-gray-400  border-gray-400 w-full placeholder:text-lg outline-none placeholder:font-light placeholder:text-gray-400 font-extralight text-sm;
+  }
+  .btn-secondary {
+    @apply flex items-center gap-1 px-4 py-2 hover:bg-blue-950 transition-colors bg-header text-white text-lg rounded-lg;
   }
 }
 
@@ -78,6 +80,19 @@ body {
 @media (max-width: 890px) {
   html {
     font-size: 60%;
+  }
+  .active {
+    color: #fb923c;
+    border-bottom: 0.2rem solid #fb923c;
+  }
+  SELECT {
+    background: url("data:image/svg+xml,<svg height='10px' width='6rem' viewBox='0 0 16 16' fill='%23000000' xmlns='http://www.w3.org/2000/svg'><path d='M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z'/></svg>")
+      no-repeat;
+    background-position: calc(100% - 0.75rem) center !important;
+    -moz-appearance: none !important;
+    -webkit-appearance: none !important;
+    appearance: none !important;
+    padding-right: 2rem !important;
   }
 }
 @media (max-width: 550px) {

@@ -12,6 +12,7 @@ export default {
       },
       colors: {
         header: "#090D26",
+        modal: "rgba(0, 0, 0, 0.336)",
       },
     },
   },

@@ -18,6 +18,11 @@ import {
 function DashboardNavigation() {
   // state to toggle Navigation menu on mobile and tablet
   const [isOpen, setOpen] = useState(false);
+
+  // Function to toggle the navigation menu on navigating
+  const toggleMenu = () => {
+    setOpen(false);
+  };
   return (
     <header
       className={`bg-header md:h-20 md:flex-row flex-col md:p-0   md:px-16  pb-3 overflow-hidden transition-all duration-300 ${
@@ -47,62 +52,98 @@ function DashboardNavigation() {
       <nav className="md:h-full h-max w-full md:w-3/4 lg:w-2/3 md:px-0 px-5">
         <ul className="flex md:flex-row flex-col  text-white w-full px-3 justify-around">
           <li className="header-nav-item ">
-            <NavLink className="header-nav-item-a " to="search">
+            <NavLink
+              onClick={toggleMenu}
+              className="header-nav-item-a "
+              to="search"
+            >
               <MagnifyingGlassIcon className="w-4 h-4" />
               <div>Search</div>
             </NavLink>
           </li>
           <li className="header-nav-item">
-            <NavLink to="used-tracking" className="header-nav-item-a">
+            <NavLink
+              onClick={toggleMenu}
+              to="used-tracking"
+              className="header-nav-item-a"
+            >
               <ArchiveBoxIcon className="w-4 h-4" />
 
               <div>Used Tracks</div>
             </NavLink>
           </li>
           <li className="header-nav-item">
-            <NavLink to="buy-a-plan" className="header-nav-item-a">
+            <NavLink
+              onClick={toggleMenu}
+              to="buy-a-plan"
+              className="header-nav-item-a"
+            >
               <ShoppingBagIcon className="w-4 h-4" />
 
               <div>Buy a plan</div>
             </NavLink>
           </li>
           <li className="header-nav-item">
-            <NavLink to="tutorials" className="header-nav-item-a">
+            <NavLink
+              onClick={toggleMenu}
+              to="tutorials"
+              className="header-nav-item-a"
+            >
               <AcademicCapIcon className="w-4 h-4" />
 
               <div>Tutorials</div>
             </NavLink>
           </li>
           <li className="header-nav-item">
-            <NavLink to="top-geo" className="header-nav-item-a">
+            <NavLink
+              onClick={toggleMenu}
+              to="top-geo"
+              className="header-nav-item-a"
+            >
               <MapPinIcon className="w-4 h-4" />
 
               <div>Top Geo</div>
             </NavLink>
           </li>
           <li className="header-nav-item">
-            <NavLink to="contact-us" className="header-nav-item-a">
+            <NavLink
+              onClick={toggleMenu}
+              to="contact-us"
+              className="header-nav-item-a"
+            >
               <PhoneIcon className="w-4 h-4" />
 
               <div>Contact us</div>
             </NavLink>
           </li>
           <li className="header-nav-item">
-            <NavLink to="api" className="header-nav-item-a">
+            <NavLink
+              onClick={toggleMenu}
+              to="api"
+              className="header-nav-item-a"
+            >
               <CodeBracketIcon className="w-4 h-4" />
 
               <div>API</div>
             </NavLink>
           </li>
           <li className="header-nav-item">
-            <NavLink to="extension" className="header-nav-item-a">
+            <NavLink
+              onClick={toggleMenu}
+              to="extension"
+              className="header-nav-item-a"
+            >
               <ComputerDesktopIcon className="w-4 h-4" />
 
               <div>Extention</div>
             </NavLink>
           </li>
           <li className="header-nav-item">
-            <NavLink to="settings" className="header-nav-item-a">
+            <NavLink
+              onClick={toggleMenu}
+              to="settings"
+              className="header-nav-item-a"
+            >
               <Cog6ToothIcon className="w-4 h-4" />
 
               <div>Settings</div>
