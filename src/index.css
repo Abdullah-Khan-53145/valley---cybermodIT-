@@ -5,19 +5,24 @@
   .header-nav-item {
     @apply flex items-center;
   }
-  .active {
-    @apply text-orange-400 border-b-orange-400 md:border-b-4 border-b-2;
-  }
+
   .header-nav-item-a {
     @apply flex space-x-2 items-center h-20 w-full transition-all hover:border-b-4 hover:text-orange-400 hover:border-b-orange-400;
   }
   .tag {
     @apply flex space-x-2 items-center py-3 px-6 text-sm border  border-orange-400 text-orange-400 rounded-xl sm:w-full transition-all hover:border-b-4 sm:min-w-fit;
   }
+  .filter-text-inputs {
+    @apply border-b placeholder-gray-400  border-gray-400 w-full text-lg outline-none placeholder:font-light placeholder:text-gray-400;
+  }
 }
 
 body {
   font-family: "Space Grotesk", sans-serif;
+}
+.active {
+  color: #fb923c;
+  border-bottom: 0.3rem solid #fb923c;
 }
 
 @media (max-width: 1890px) {

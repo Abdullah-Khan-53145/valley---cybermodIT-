@@ -82,7 +82,9 @@ function Header() {
   }, [location]);
   return (
     <>
+      {/* Top navigation  */}
       <DashboardNavigation />
+      {/* sub header containing the heading subtext and Showing Access and tracking */}
       <DashboardSubHeader
         title={subHeader.title}
         subText={subHeader.subText}

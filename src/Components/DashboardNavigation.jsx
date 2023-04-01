@@ -16,7 +16,7 @@ import {
   ArrowRightOnRectangleIcon,
 } from "@heroicons/react/24/outline";
 function DashboardNavigation() {
-  // states
+  // state to toggle Navigation menu on mobile and tablet
   const [isOpen, setOpen] = useState(false);
   return (
     <header
@@ -27,11 +27,13 @@ function DashboardNavigation() {
       {/* Side logo */}
 
       <div className="md:h-20  h-20 m-0 py-4 w-full md:w-fit md:p-0   flex items-center justify-between">
+        {/* Valley Logo */}
         <img
           className="w-24   md:ml-0 ml-6 object-contain"
           src={Logo}
           alt="Valley"
         />
+        {/* Hamburger icon to toggle navigation menu for mobile and tablet  */}
         <div className="md:hidden block ">
           <Hamburger
             toggled={isOpen}
@@ -108,15 +110,18 @@ function DashboardNavigation() {
           </li>
         </ul>
       </nav>
-      {/* User Profile */}
+      {/* User Profile Information */}
       <div className="flex pb-4 md:p-0 items-center space-x-2 text-white">
+        {/* User Profile Picture */}
         <img
           src="https://www.mecgale.com/wp-content/uploads/2017/08/dummy-profile.png"
           alt="user"
           className="w-9 h-9 rounded-full"
         />
 
+        {/* Chevron Icon to open the signout menu */}
         <ChevronDownIcon className="w-6 h-6 md:block hidden" />
+        {/* Button to Signout for mobile and tablet  */}
         <button className="flex  space-x-1 md:hidden items-center  cursor-pointer text-gray-300 ">
           <span className="h-fit">Sign out</span>
           <ArrowRightOnRectangleIcon className="w-5 h-5" />
