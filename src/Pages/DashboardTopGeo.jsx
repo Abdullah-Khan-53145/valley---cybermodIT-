@@ -1,6 +1,7 @@
-import React from "react";
+import React, { useState } from "react";
 import { FolderArrowDownIcon } from "@heroicons/react/24/solid";
 import Table from "../Components/Table";
+import ZipSavedModal from "../Components/ZipSavedModal";
 function DashboardTopGeo() {
   const tableHead = ["ID", "ZIP", "Tracks", "Select"];
   const tableBody = [
@@ -14,8 +15,10 @@ function DashboardTopGeo() {
     ["8", "545434", "215", false],
     ["4", "545434", "215", false],
   ];
+  const [toggleModal, setToggleModal] = useState(false);
   return (
     <section className="md:mx-16 mx-5 mt-12 flex flex-col gap-8">
+      <ZipSavedModal status={toggleModal} setStatus={setToggleModal} />
       <div className="flex flex-col gap-8">
         {/* Main headin */}
         <h2 className="max-w-[90rem] font-semibold  text-3xl">
@@ -29,7 +32,10 @@ function DashboardTopGeo() {
             <input type="text" placeholder="Zip seperated by commas" />
           </div>
           {/* save button */}
-          <button className="btn-primary p-2">
+          <button
+            onClick={() => setToggleModal(true)}
+            className="btn-primary p-2"
+          >
             <FolderArrowDownIcon className="w-6 h-6 text-white" />
           </button>
         </div>
