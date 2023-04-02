@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Package from "../Components/Package";
 import AcceptRefundPolicy from "../Components/AcceptRefundPolicy";
 import { InformationCircleIcon } from "@heroicons/react/24/solid";
-import PaymentMethodModal from "../Components/PaymentMethodModal";
+import PaymentInfoModal from "../Components/PaymentInfoModal";
 
 function DashboardBuyPlan() {
   const [toggleModal, setToggleModal] = useState(false);
@@ -41,12 +41,12 @@ function DashboardBuyPlan() {
       className="md:mx-16
     mx-5"
     >
-      <PaymentMethodModal status={toggleModal} setStatus={setToggleModal} />
+      <PaymentInfoModal status={toggleModal} setStatus={setToggleModal} />
       {/* Buy a plan header */}
       <div className="flex w-full justify-between py-12 border-b ">
         <AcceptRefundPolicy />
         {/* payment information link to open modal */}
-        <div className="flex gap-2">
+        <div className="flex gap-2" onClick={() => setToggleModal(true)}>
           <InformationCircleIcon className="text-blue-500 w-5 h-5" />
           <p>We don’t keep your payment data</p>
         </div>
@@ -54,11 +54,7 @@ function DashboardBuyPlan() {
       {/* Packages grid  */}
       <div className="flex flex-wrap gap-8 pt-12">
         {packages.map((pack, index) => (
-          <Package
-            price={pack.price}
-            trackings={pack.trackings}
-            setPayment={setToggleModal}
-          />
+          <Package price={pack.price} trackings={pack.trackings} />
         ))}
         {/* Need a Custom package section */}
         <div className="shadow flex flex-col gap-4 w-full md:max-w-[20rem]  justify-center items-center">
