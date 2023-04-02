@@ -15,13 +15,15 @@
     @apply border-b placeholder-gray-400  border-gray-400 w-full placeholder:text-lg outline-none placeholder:font-light placeholder:text-gray-400 font-extralight text-sm;
   }
   .btn-primary {
-    @apply flex items-center gap-2 text-white font-semibold bg-orange-400 text-sm px-6 py-2 rounded-md;
+    @apply flex items-center gap-2 text-white font-semibold bg-orange-400 text-sm px-6 py-2 rounded-md hover:bg-orange-300 transition-colors;
   }
   .btn-secondary {
     @apply flex items-center gap-1 px-4 py-2 hover:bg-blue-950 transition-colors bg-header text-white text-lg rounded-lg;
   }
 }
-
+input {
+  outline: none;
+}
 body {
   font-family: "Space Grotesk", sans-serif;
 }
