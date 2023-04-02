@@ -12,7 +12,7 @@ function DashboardSettings() {
   return (
     <section className="md:mx-16 mx-5 mt-16 flex flex-col gap-8">
       {/* Form to manipulate the setting of profile */}
-      <form className="max-w-[25rem] flex flex-col gap-8 items-start p-8 bg-white">
+      <form className="md:max-w-[25rem]  flex flex-col gap-8 items-start p-8 bg-white">
         {/* Email */}
         <div className="flex p-4 border-b items-center justify-between w-full">
           <input type="text" placeholder="Email" />

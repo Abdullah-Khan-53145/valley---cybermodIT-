@@ -49,7 +49,7 @@ function DashboardBuyPlan() {
         </div>
       </div>
       {/* Packages grid  */}
-      <div className="flex flex-wrap gap-8">
+      <div className="flex flex-wrap gap-8 pt-12">
         {packages.map((pack, index) => (
           <Package price={pack.price} trackings={pack.trackings} />
         ))}
