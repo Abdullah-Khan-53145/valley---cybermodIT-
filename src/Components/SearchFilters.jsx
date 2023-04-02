@@ -107,30 +107,33 @@ function SearchFilters() {
           <div className="flex md:flex-row flex-col justify-center gap-16 ">
             <Datepicker
               useRange={false}
+              primaryColor="blue"
               asSingle={true}
               placeholder={"Shipped to, Date"}
               toggleClassName="text-gray-900 w-8"
-              inputClassName="outline-none focus:ring-0  focus:border-0  placeholder:text-lg text-lg pl-0"
+              inputClassName="outline-none border-0 bg-white focus:ring-0  focus:border-0  placeholder:text-lg text-lg pl-0"
               containerClassName="border-b border-gray-400 w-full "
               value={shippedToDate}
               onChange={handleShippedToDateChange}
             />
             <Datepicker
               useRange={false}
+              primaryColor="blue"
               asSingle={true}
               placeholder={"Shipped from, Date"}
               toggleClassName="text-gray-900 w-8"
-              inputClassName="outline-none focus:ring-0  focus:border-0  placeholder:text-lg text-lg pl-0"
+              inputClassName="outline-none border-0 bg-white focus:ring-0  focus:border-0  placeholder:text-lg text-lg pl-0"
               containerClassName="border-b border-gray-400 w-full"
               value={shippedFromDate}
               onChange={handleShippedFromDateChange}
             />
             <Datepicker
               useRange={false}
+              primaryColor="blue"
               asSingle={true}
               placeholder={"Delivery By"}
               toggleClassName="text-gray-900 w-8"
-              inputClassName="outline-none focus:ring-0  focus:border-0   placeholder:text-lg text-lg pl-4"
+              inputClassName="outline-none border-0 bg-white focus:ring-0  focus:border-0   placeholder:text-lg text-lg pl-4"
               containerClassName="border-b border-gray-400 w-full text-lg"
               value={deliveryDate}
               onChange={handleDeliveryDateChange}

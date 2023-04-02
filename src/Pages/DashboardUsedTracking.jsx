@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   CalculatorIcon,
   MagnifyingGlassIcon,
@@ -7,6 +7,7 @@ import {
   AdjustmentsHorizontalIcon,
 } from "@heroicons/react/24/outline";
 import Table from "../Components/Table";
+import CountTrackingModal from "../Components/CountTrackingModal";
 function DashboardUsedTracking() {
   const tableHead = [
     "Tracking ID",
@@ -55,9 +56,12 @@ function DashboardUsedTracking() {
       "Delivered",
     ],
   ];
+
+  const [toggleModal, setToggleModal] = useState(false);
   return (
     // Used tracks main
     <main className="md:mx-16 mx-5 mt-5">
+      <CountTrackingModal status={toggleModal} setStatus={setToggleModal} />
       {/* counter card to open a counter modal to count the tracks used */}
       <div className="w-full flex justify-start">
         {/* counter card */}
@@ -68,7 +72,10 @@ function DashboardUsedTracking() {
               <CalculatorIcon className="w-5 h-5" />
             </div>
             {/* text and button to open modal */}
-            <div className="text-white flex flex-col gap-2 items-start">
+            <div
+              onClick={() => setToggleModal(true)}
+              className="text-white flex flex-col gap-2 items-start"
+            >
               <p>Count my total number for period</p>
               <button className="p-1 px-4 rounded-full border border-white ">
                 Count
