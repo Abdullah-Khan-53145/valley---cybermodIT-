@@ -1,4 +1,5 @@
 import React from "react";
+import CustomCheckbox from "./CustomCheckbox";
 function Table({ head, body = [] }) {
   return (
     <div className={`overflow-x-auto ${body.length === 0 && "border-b"} `}>
@@ -24,7 +25,7 @@ function Table({ head, body = [] }) {
                 {row?.map((cell, index) => (
                   <td
                     key={index}
-                    className=" text-center py-6 border-b border-gray-300"
+                    className="bg-white  justify-center text-center py-6 border-b border-gray-300"
                   >
                     {index === row.length - 1 &&
                     head[head.length - 1] === "Status" ? (
@@ -35,8 +36,10 @@ function Table({ head, body = [] }) {
                       >
                         {cell}
                       </span>
+                    ) : index === row.length - 1 ? (
+                      <CustomCheckbox />
                     ) : (
-                      <span>{cell}</span>
+                      <span> {cell}</span>
                     )}
                   </td>
                 ))}
@@ -46,7 +49,7 @@ function Table({ head, body = [] }) {
       </table>
       {/* If body is empty */}
       {body.length === 0 && (
-        <div className="text-2xl  overflow-x-auto  flex sm:flex-row flex-col items-center text-center gap-1  relative justify-center font-semibold py-12 min-w-[84rem] border">
+        <div className="text-2xl  overflow-x-auto  flex sm:flex-row flex-col items-center text-center gap-1  relative justify-center font-semibold py-12  min-w-[84rem] border">
           If you couldn't find tracking numbers please read
           <a
             href="https://getmoretracks.tawk.help/article/i-cannot-find-a-tracking-number-why"
