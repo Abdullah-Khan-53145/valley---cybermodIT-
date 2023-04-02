@@ -15,9 +15,11 @@ import {
   ChevronDownIcon,
   ArrowRightOnRectangleIcon,
 } from "@heroicons/react/24/outline";
+import ConfrimSignOutModal from "./ConfrimSignOutModal";
 function DashboardNavigation() {
   // state to toggle Navigation menu on mobile and tablet
   const [isOpen, setOpen] = useState(false);
+  const [toggleModal, setTogalModal] = useState(false);
 
   // Function to toggle the navigation menu on navigating
   const toggleMenu = () => {
@@ -29,6 +31,7 @@ function DashboardNavigation() {
         isOpen ? "h-128" : "h-20"
       } header-nav flex justify-between items-center`}
     >
+      <ConfrimSignOutModal status={toggleModal} setStatus={setTogalModal} />
       {/* Side logo */}
 
       <div className="md:h-20  h-20 m-0 py-4 w-full md:w-fit md:p-0   flex items-center justify-between">
@@ -152,7 +155,7 @@ function DashboardNavigation() {
         </ul>
       </nav>
       {/* User Profile Information */}
-      <div className="flex pb-4 md:p-0 items-center space-x-2 text-white">
+      <div className="flex pb-4 md:p-0 items-center space-x-2 group text-white">
         {/* User Profile Picture */}
         <img
           src="https://www.mecgale.com/wp-content/uploads/2017/08/dummy-profile.png"
@@ -163,10 +166,18 @@ function DashboardNavigation() {
         {/* Chevron Icon to open the signout menu */}
         <ChevronDownIcon className="w-6 h-6 md:block hidden" />
         {/* Button to Signout for mobile and tablet  */}
-        <button className="flex  space-x-1 md:hidden items-center  cursor-pointer text-gray-300 ">
-          <span className="h-fit">Sign out</span>
-          <ArrowRightOnRectangleIcon className="w-5 h-5" />
-        </button>
+        <div className=" group-hover:md:block  md:hidden md:absolute md:right-6 md:pt-10 md:top-5 ">
+          <button
+            onClick={() => {
+              setTogalModal(true);
+              setOpen(false);
+            }}
+            className="flex  space-x-1 group-hover:md:flex  md:flex md:text-lg md:py-3 md:px-6 md:rounded-md md:font-bold md:right-9 md:top-16 md:mt-2 md:bg-gray-100 md:text-black   items-center  cursor-pointer text-gray-300 "
+          >
+            <span className="h-fit">Sign out</span>
+            <ArrowRightOnRectangleIcon className="w-5 h-5" />
+          </button>
+        </div>
       </div>
     </header>
   );
