@@ -12,7 +12,7 @@ function PaymentMethodModal({ status, setStatus }) {
         status ? "flex" : "hidden"
       } fixed z-10 inset-0  bg-modal  items-center justify-center`}
     >
-      {/* More filter modal */}
+      {/* Payment modal */}
       <div className="bg-white  flex flex-col items-center gap-6 py-4 rounded-2xl">
         {/* Modal Header */}
         <div className="flex w-full gap-12 items-center px-8 pb-4  border-b justify-between ">

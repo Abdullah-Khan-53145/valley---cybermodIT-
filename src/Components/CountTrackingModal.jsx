@@ -46,7 +46,7 @@ function CountTrackingModal({ status, setStatus }) {
           <h1 className="text-7xl text-orange-400 ">53</h1>
           <h1 className="text-sm  underline font-bold">Total Trackings</h1>
         </div>
-        {/* All Filters container */}
+        {/* Counter */}
         <div className="flex gap-6 px-8 w-fit ">
           <Datepicker
             useRange={false}
@@ -71,7 +71,7 @@ function CountTrackingModal({ status, setStatus }) {
             onChange={handleShippedFromDateChange}
           />
         </div>
-        {/* Modal Header */}
+        {/* Modal footer */}
         <div className="flex w-full px-8  mb-2  justify-start ">
           <button className="btn-secondary px-8 text-sm">Calculate</button>
         </div>

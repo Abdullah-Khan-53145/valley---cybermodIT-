@@ -118,7 +118,7 @@ function FilterUsedTrackModal({ status, setStatus }) {
             </div>
           ))}
         </div>
-        {/* Modal Header */}
+        {/* Modal Footer */}
         <div className="flex w-full px-8  mb-2  justify-start ">
           <button className="btn-secondary px-8 text-sm">Filter Now</button>
         </div>

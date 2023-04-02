@@ -46,7 +46,10 @@ function DashboardBuyPlan() {
       <div className="flex w-full justify-between py-12 border-b ">
         <AcceptRefundPolicy />
         {/* payment information link to open modal */}
-        <div className="flex gap-2" onClick={() => setToggleModal(true)}>
+        <div
+          className="flex cursor-pointer gap-2"
+          onClick={() => setToggleModal(true)}
+        >
           <InformationCircleIcon className="text-blue-500 w-5 h-5" />
           <p>We don’t keep your payment data</p>
         </div>
