@@ -95,7 +95,7 @@ function SearchFilters() {
           {/* Right side button to open more filters  */}
           <button
             onClick={() => setToggleModal(!toggleModal)}
-            className="flex items-center gap-2 text-white font-semibold bg-orange-400 text-sm px-6 py-2 rounded-md"
+            className="btn-primary"
           >
             <AdjustmentsHorizontalIcon className="w-5 h-5" />
             <span>More Filters</span>

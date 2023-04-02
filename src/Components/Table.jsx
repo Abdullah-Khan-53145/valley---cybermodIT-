@@ -1,7 +1,7 @@
 import React from "react";
 function Table({ head, body = [] }) {
   return (
-    <div className={`overflow-x-auto ${body.length === 0 && "border-b"}`}>
+    <div className={`overflow-x-auto ${body.length === 0 && "border-b"} `}>
       <table className="table-auto w-full">
         <thead className="bg-gray-50">
           <tr>
@@ -46,7 +46,7 @@ function Table({ head, body = [] }) {
       </table>
       {/* If body is empty */}
       {body.length === 0 && (
-        <div className="text-2xl  overflow-x-auto  flex sm:flex-row flex-col items-center text-center gap-1 justify-center font-semibold py-12">
+        <div className="text-2xl  overflow-x-auto  flex sm:flex-row flex-col items-center text-center gap-1  relative justify-center font-semibold py-12 min-w-[84rem] border">
           If you couldn't find tracking numbers please read
           <a
             href="https://getmoretracks.tawk.help/article/i-cannot-find-a-tracking-number-why"
