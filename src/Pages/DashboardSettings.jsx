@@ -6,7 +6,7 @@ import {
   BookmarkSquareIcon,
 } from "@heroicons/react/24/outline";
 function DashboardSettings() {
-  const [password, setPassword] = useState({ current: true, new: true });
+  const [password, setPassword] = useState({ current: false, new: false });
   const handleClick = () => {};
 
   return (
