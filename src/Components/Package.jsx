@@ -1,7 +1,7 @@
 import React from "react";
 import AcceptRefundPolicy from "./AcceptRefundPolicy";
 
-function Package({ price, trackings }) {
+function Package({ price, trackings, setPayment }) {
   return (
     <div className="p-12 flex flex-col gap-4 w-full md:max-w-[20rem] hover:shadow-lg cursor-pointer">
       <h3 className="text-sm font-bold ">{trackings} Tracks</h3>
@@ -10,7 +10,10 @@ function Package({ price, trackings }) {
       </h1>
       <p className="text-gray-600">Lorem ipsum dolor sit amet, consectetur </p>
       <AcceptRefundPolicy />
-      <button className="btn-primary hover:bg-header transition-colors w-full justify-center">
+      <button
+        onClick={() => setPayment(true)}
+        className="btn-primary hover:bg-header transition-colors w-full justify-center"
+      >
         Choose Plan
       </button>
     </div>

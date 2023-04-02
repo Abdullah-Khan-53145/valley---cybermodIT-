@@ -1,9 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 import Package from "../Components/Package";
 import AcceptRefundPolicy from "../Components/AcceptRefundPolicy";
 import { InformationCircleIcon } from "@heroicons/react/24/solid";
+import PaymentMethodModal from "../Components/PaymentMethodModal";
 
 function DashboardBuyPlan() {
+  const [toggleModal, setToggleModal] = useState(false);
   const packages = [
     {
       price: 9.99,
@@ -39,6 +41,7 @@ function DashboardBuyPlan() {
       className="md:mx-16
     mx-5"
     >
+      <PaymentMethodModal status={toggleModal} setStatus={setToggleModal} />
       {/* Buy a plan header */}
       <div className="flex w-full justify-between py-12 border-b ">
         <AcceptRefundPolicy />
@@ -51,7 +54,11 @@ function DashboardBuyPlan() {
       {/* Packages grid  */}
       <div className="flex flex-wrap gap-8 pt-12">
         {packages.map((pack, index) => (
-          <Package price={pack.price} trackings={pack.trackings} />
+          <Package
+            price={pack.price}
+            trackings={pack.trackings}
+            setPayment={setToggleModal}
+          />
         ))}
         {/* Need a Custom package section */}
         <div className="shadow flex flex-col gap-4 w-full md:max-w-[20rem]  justify-center items-center">
