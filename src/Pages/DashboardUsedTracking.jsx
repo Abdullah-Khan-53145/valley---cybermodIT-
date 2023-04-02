@@ -8,6 +8,7 @@ import {
 } from "@heroicons/react/24/outline";
 import Table from "../Components/Table";
 import CountTrackingModal from "../Components/CountTrackingModal";
+import FilterUsedTrackModal from "../Components/FilterUsedTrackModal";
 function DashboardUsedTracking() {
   const tableHead = [
     "Tracking ID",
@@ -58,10 +59,15 @@ function DashboardUsedTracking() {
   ];
 
   const [toggleModal, setToggleModal] = useState(false);
+  const [toggleFilterModal, setToggleFilterModal] = useState(false);
   return (
     // Used tracks main
     <main className="md:mx-16 mx-5 mt-5">
       <CountTrackingModal status={toggleModal} setStatus={setToggleModal} />
+      <FilterUsedTrackModal
+        status={toggleFilterModal}
+        setStatus={setToggleFilterModal}
+      />
       {/* counter card to open a counter modal to count the tracks used */}
       <div className="w-full flex justify-start">
         {/* counter card */}
@@ -102,7 +108,10 @@ function DashboardUsedTracking() {
               <MagnifyingGlassIcon className="w-5 h-5" />
               <input type="text" placeholder="Search" />
             </div>
-            <AdjustmentsHorizontalIcon className="w-8 h-8 ml-4" />
+            <AdjustmentsHorizontalIcon
+              onClick={() => setToggleFilterModal(true)}
+              className="w-8 h-8 ml-4"
+            />
           </div>
           {/* Dropdown to set the number of shown entries */}
           <div className="flex items-center gap-2">
