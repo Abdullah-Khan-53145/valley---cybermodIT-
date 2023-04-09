@@ -2,7 +2,7 @@ import React from "react";
 import { ArrowDownTrayIcon } from "@heroicons/react/24/outline";
 function DashboardExtention() {
   return (
-    <section className="md:mx-16 mx-5 mt-12 flex items-start flex-col gap-8">
+    <main className="md:mx-16 mx-5 mt-12 flex items-start flex-col gap-8 pb-8">
       {/* Heading */}
       <h2 className="text-2xl font-semibold">Getmoretracks Chrome extension</h2>
       {/* Extention download button */}
@@ -18,7 +18,7 @@ function DashboardExtention() {
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
         allowfullscreen
       ></iframe>
-    </section>
+    </main>
   );
 }
 

@@ -9,7 +9,14 @@ import DashboardContactUs from "./Pages/DashboardContactUs";
 import DashboardApi from "./Pages/DashboardApi";
 import DashboardExtention from "./Pages/DashboardExtention";
 import DashboardSettings from "./Pages/DashboardSettings";
+import Home from "./Pages/Home";
+import Account from "./Pages/Account";
+import LoginSuccess from "./Pages/LoginSuccess";
 const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <Home />,
+  },
   {
     path: "/dashboard",
     element: <Header />,
@@ -52,11 +59,19 @@ const router = createBrowserRouter([
       },
     ],
   },
+  {
+    path: "/accounts/:id",
+    element: <Account />,
+  },
+  {
+    path: "/login/success",
+    element: <LoginSuccess />,
+  },
 ]);
 
 function App() {
   return (
-    <div className="bg-gray-50 min-h-screen pb-8">
+    <div className="bg-gray-50 min-h-screen h-full">
       <RouterProvider router={router} />
     </div>
   );

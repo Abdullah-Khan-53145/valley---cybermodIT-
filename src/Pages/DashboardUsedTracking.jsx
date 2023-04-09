@@ -62,7 +62,7 @@ function DashboardUsedTracking() {
   const [toggleFilterModal, setToggleFilterModal] = useState(false);
   return (
     // Used tracks main
-    <main className="md:mx-16 mx-5 mt-5">
+    <main className="md:mx-16 mx-5 mt-5 pb-8">
       <CountTrackingModal status={toggleModal} setStatus={setToggleModal} />
       <FilterUsedTrackModal
         status={toggleFilterModal}

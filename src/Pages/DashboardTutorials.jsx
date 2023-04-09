@@ -2,7 +2,7 @@ import React from "react";
 import { PlayCircleIcon } from "@heroicons/react/24/outline";
 function DashboardTutorials() {
   return (
-    <section className="md:mx-16 mx-5 mt-12 flex flex-col gap-8">
+    <main className="md:mx-16 mx-5 mt-12 flex flex-col gap-8 pb-8">
       <h1 className="flex flex-col md:text-start text-center  text-2xl sm:text-3xl  md:text-4xl lg:text-5xl font-extrabold">
         <span className="md:text-start text-center">
           To use our service correctly, watch the video tutorial
@@ -28,7 +28,7 @@ function DashboardTutorials() {
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
         allowfullscreen
       ></iframe>
-    </section>
+    </main>
   );
 }
 

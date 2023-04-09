@@ -16,7 +16,6 @@ function FilterUsedTrackModal({ status, setStatus }) {
     { filter: "Show only changed tracking #", status: false },
     { filter: "Arriving earlier", status: false },
     { filter: "Arriving later", status: false },
-
     { filter: "in transit", status: false },
   ]);
 

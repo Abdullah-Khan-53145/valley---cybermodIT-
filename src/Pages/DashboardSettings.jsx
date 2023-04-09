@@ -10,7 +10,7 @@ function DashboardSettings() {
   const handleClick = () => {};
 
   return (
-    <section className="md:mx-16 mx-5 mt-16 flex flex-col gap-8">
+    <main className="md:mx-16 mx-5 mt-16 flex flex-col gap-8 pb-8">
       {/* Form to manipulate the setting of profile */}
       <form className="md:max-w-[25rem]  flex flex-col gap-8 items-start p-8 bg-white">
         {/* Email */}
@@ -63,7 +63,7 @@ function DashboardSettings() {
           <span>Save Setting</span>
         </button>
       </form>
-    </section>
+    </main>
   );
 }
 

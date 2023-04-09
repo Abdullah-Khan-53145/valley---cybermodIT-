@@ -37,9 +37,9 @@ function DashboardBuyPlan() {
     },
   ];
   return (
-    <section
+    <main
       className="md:mx-16
-    mx-5"
+    mx-5 pb-8"
     >
       <PaymentInfoModal status={toggleModal} setStatus={setToggleModal} />
       {/* Buy a plan header */}
@@ -69,7 +69,7 @@ function DashboardBuyPlan() {
           </button>
         </div>
       </div>
-    </section>
+    </main>
   );
 }
 

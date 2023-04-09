@@ -18,10 +18,10 @@ function DashboardSearch() {
     "Status",
   ];
   return (
-    <main>
+    <main className="pb-8">
       <SearchFilters />
       {/* Search tracking table section */}
-      <section className="md:mx-16 flex flex-col gap-10 mx-5 mt-10   bg-white">
+      <section className="md:mx-16 flex flex-col gap-10 mx-5 mt-10   bg-white ">
         {/* Header of Search tracking section */}
         <div className="flex justify-between pt-8 px-8">
           {/* Search input */}

@@ -2,7 +2,7 @@ import React from "react";
 
 function DashboardContactUs() {
   return (
-    <section className="md:mx-16 mx-5 mt-12 flex flex-col gap-8">
+    <main className="md:mx-16 mx-5 mt-12 flex flex-col gap-8 pb-8">
       {/* Heading */}
       <h2 className="text-2xl font-semibold">
         If you have any questions, please use our contacts below:
@@ -42,7 +42,7 @@ function DashboardContactUs() {
           <span>Contact On Telegram</span>
         </button>
       </div>
-    </section>
+    </main>
   );
 }
 

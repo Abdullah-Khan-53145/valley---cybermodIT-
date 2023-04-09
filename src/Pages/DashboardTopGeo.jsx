@@ -17,7 +17,7 @@ function DashboardTopGeo() {
   ];
   const [toggleModal, setToggleModal] = useState(false);
   return (
-    <section className="md:mx-16 mx-5 mt-12 flex flex-col gap-8">
+    <main className="md:mx-16 mx-5 mt-12 flex flex-col gap-8 pb-8">
       <ZipSavedModal status={toggleModal} setStatus={setToggleModal} />
       <div className="flex flex-col gap-8">
         {/* Main headin */}
@@ -42,7 +42,7 @@ function DashboardTopGeo() {
       </div>
       {/* Table */}
       <Table head={tableHead} body={tableBody} />
-    </section>
+    </main>
   );
 }
 
