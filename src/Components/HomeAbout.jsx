@@ -1,5 +1,5 @@
 import React from "react";
-import Screen from "../assets/screen.png";
+import Screen from "../assets/screen.svg";
 import Bg from "../assets/about.png";
 function HomeAbout() {
   return (

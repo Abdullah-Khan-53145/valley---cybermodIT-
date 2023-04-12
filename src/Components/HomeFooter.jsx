@@ -2,7 +2,7 @@ import React from "react";
 
 function HomeFooter() {
   return (
-    <footer className="flex flex-col gap-12 items-center mt-36">
+    <footer className="flex flex-col gap-12 items-center mt-36 relative z-10">
       {/* Top Info */}
       <div className="flex flex-col items-center">
         <h1 className="text-5xl font-extrabold">Get in Touch</h1>
@@ -12,7 +12,7 @@ function HomeFooter() {
       </div>
       {/* Contact Cards */}
       <div className="flex md:flex-nowrap flex-wrap justify-around gap-10 px-10 w-full">
-        <div className="flex flex-col flex-wrap gap-2 shadow-lg py-10 px-16 w-full">
+        <div className="flex flex-col flex-wrap gap-2 shadow-lg py-10 px-16 w-full bg-white">
           <div className="flex font-extrabold items-center gap-3">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -29,7 +29,7 @@ function HomeFooter() {
           </div>
           <p>111-515-5353</p>
         </div>
-        <div className="flex flex-col gap-2 shadow-lg py-10 px-16 w-full">
+        <div className="flex flex-col gap-2 shadow-lg py-10 px-16 w-full bg-white">
           <div className="flex font-extrabold items-center gap-3">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -46,7 +46,7 @@ function HomeFooter() {
           </div>
           <p>Getmore@gmail.com</p>
         </div>
-        <div className="flex flex-col gap-2 shadow-lg py-10 px-16 w-full">
+        <div className="flex flex-col gap-2 shadow-lg py-10 px-16 w-full bg-white">
           <div className="flex font-extrabold items-center gap-3">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -63,7 +63,7 @@ function HomeFooter() {
           </div>
           <p>535-533-5353</p>
         </div>
-        <div className="flex flex-col gap-2 shadow-lg py-10 px-16 w-full">
+        <div className="flex flex-col gap-2 shadow-lg py-10 px-16 w-full bg-white">
           <div className="flex font-extrabold items-center gap-3">
             <svg
               xmlns="http://www.w3.org/2000/svg"

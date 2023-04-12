@@ -13,7 +13,6 @@ import HomeFooter from "../Components/HomeFooter";
 function Home() {
   return (
     <div className="bg-white">
-      <HomeHeader />
       <HomeHero />
       <TrackShipment />
       <HomeAbout />

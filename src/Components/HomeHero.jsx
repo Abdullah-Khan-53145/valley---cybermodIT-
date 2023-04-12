@@ -1,6 +1,6 @@
 import React from "react";
 import { ArrowLongRightIcon } from "@heroicons/react/24/outline";
-import Hero from "../assets/hero.png";
+import Hero from "../assets/hero.svg";
 function HomeHero() {
   return (
     <section className="flex md:flex-row flex-col-reverse gap-8  items-center  md:justify-between lg:justify-around p-10 ">

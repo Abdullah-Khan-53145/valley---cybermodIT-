@@ -12,10 +12,27 @@ import DashboardSettings from "./Pages/DashboardSettings";
 import Home from "./Pages/Home";
 import Account from "./Pages/Account";
 import LoginSuccess from "./Pages/LoginSuccess";
+import HomeHeader from "./Components/HomeHeader";
+import Pricing from "./Pages/Pricing";
+import ContactUs from "./Pages/ContactUs";
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <Home />,
+    element: <HomeHeader />,
+    children: [
+      {
+        path: "",
+        element: <Home />,
+      },
+      {
+        path: "pricing",
+        element: <Pricing />,
+      },
+      {
+        path: "contact-us",
+        element: <ContactUs />,
+      },
+    ],
   },
   {
     path: "/dashboard",
