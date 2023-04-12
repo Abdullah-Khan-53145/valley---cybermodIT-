@@ -35,8 +35,8 @@ const packages = [
 ];
 function Pricing() {
   return (
-    <main>
-      <section className="flex flex-col items-center gap-8 pb-12 relative z-10 mt-12">
+    <main className="bg-white min-h-screen">
+      <section className="flex flex-col items-center gap-8 pb-12 relative z-10 pt-12">
         <img src={pricingBG} className="absolute left-0 -z-10" alt="" />
         <h1 className="text-5xl font-extrabold text-center">
           Buy Monthly Packages Today!

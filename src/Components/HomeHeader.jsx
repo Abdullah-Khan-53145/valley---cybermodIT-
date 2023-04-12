@@ -9,7 +9,7 @@ function HomeHeader() {
   return (
     <>
       <header
-        className={`flex flex-col md:shadow-none  md:gap-0 shadow-md md:flex-row items-center justify-between px-8  md:py-8 pt-5 transition-all overflow-hidden md:h-fit ${
+        className={`flex flex-col md:shadow-none  md:gap-0 shadow-md md:flex-row bg-white items-center justify-between px-8  md:py-8 pt-5 transition-all overflow-hidden md:h-fit ${
           isOpen ? "h-[30rem]" : "h-24"
         }`}
       >

@@ -4,7 +4,7 @@ import { ArrowUpRightIcon } from "@heroicons/react/24/outline";
 import BG from "../assets/contact-page.svg";
 function ContactUs() {
   return (
-    <main>
+    <main className="bg-white min-h-screen">
       <section className="px-10 relative z-10">
         <img src={BG} className="absolute right-0 top-0 -z-10" alt="" />
         <form className="flex flex-col gap-4">
