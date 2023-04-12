@@ -1,9 +1,9 @@
 import React from "react";
-import Client1 from "../assets/clientOne.png";
-import Client2 from "../assets/clientTwo.png";
-import Client3 from "../assets/clientThree.png";
-import Client4 from "../assets/clientFour.png";
-import Client5 from "../assets/clientFive.png";
+import Client1 from "../assets/clientOne.svg";
+import Client2 from "../assets/clientTwo.svg";
+import Client3 from "../assets/clientThree.svg";
+import Client4 from "../assets/clientFour.svg";
+import Client5 from "../assets/clientFive.svg";
 function Clients() {
   return (
     <section className="flex gap-12 flex-col items-center p-10 my-32 flex-wrap">

@@ -1,11 +1,6 @@
 import React from "react";
 import Side from "../assets/side-bg.png";
-import ServiceOne from "../assets/serviceOne.png";
-import ServiceTwo from "../assets/serviceTwo.png";
-import ServiceThree from "../assets/serviceThree.png";
-import ServiceFour from "../assets/serviceFour.png";
-import ServiceFive from "../assets/serviceFive.png";
-import ServiceSix from "../assets/serviceSix.png";
+import Services from "../assets/services.svg";
 
 function TrackShipment() {
   return (
@@ -46,16 +41,7 @@ function TrackShipment() {
       </div>
       {/* Imgs for curiers */}
       <div className="flex gap-8">
-        <img className="md:w-24 w-16 object-contain" src={ServiceOne} alt="" />
-        <img className="md:w-24 w-16 object-contain" src={ServiceTwo} alt="" />
-        <img
-          className="md:w-24 w-16 object-contain"
-          src={ServiceThree}
-          alt=""
-        />
-        <img className="md:w-24 w-16 object-contain" src={ServiceFour} alt="" />
-        <img className="md:w-24 w-16 object-contain" src={ServiceFive} alt="" />
-        <img className="md:w-24 w-16 object-contain" src={ServiceSix} alt="" />
+        <img className="md:w-[50rem]  object-contain" src={Services} alt="" />
       </div>
     </section>
   );
